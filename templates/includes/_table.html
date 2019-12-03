@@ -1,0 +1,44 @@
+{% for pkg in package %}
+
+<table class="table">
+    <thead style="background-color: #2e2e2e;">
+        <tr>
+            <th scope="col">Query Term</th>
+            <th scope="col">Term-Count</th>
+            <th scope="col">Term-Freq (tf)</th>
+            <th scope="col">Doc-Freq (df)</th>
+            <th scope="col">Inv-Doc-Freq (idf)</th>
+            <th scope="col">TF-IDF</th>
+        </tr>
+    </thead>
+    <tbody style="background-color: grey;">
+        {% for term, entry in pkg['info'].items() %}
+        <tr>
+            <td>{{ term }}</td>
+            {% for num in entry.values() %}
+                <td>{{ num }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        <td colspan="6" bgcolor="#2e2e2e"></td>
+    </tbody>
+    <tfoot style="background-color: grey;">
+        <tr>
+            <td>Pokemon</td>
+            <td>{{ pkg['name'] }}</td>
+            <td>National Pokedex Number</td>
+            <td>{{ pkg['doc'] }}</td>
+            <td>TF-IDF score</td>
+            <td>{{ pkg['score'] }}</td>
+        </tr>
+        <tr>
+            <td colspan="1">Title</td>
+            <td colspan="5">{{ pkg['title'] }}</td>
+        </tr>
+        <tr>
+            <td colspan="1">Description </td>
+            <td colspan="5">{{ pkg['description'] }}</td>
+        </tr>
+    </tfoot>
+</table>
+{% endfor %}

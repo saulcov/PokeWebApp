@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+{% block body %}
+    <!--Home Stuff-->
+<div class="container">
+    <div class="row rtest">
+        <div class="col-7 ctest" style="padding-left: 10px; padding-right: 10px;">
+            <div class="box">
+                <form action="" style="width: 500px; margin: auto; padding-top: 10px;">
+                    <div class="form-group">
+                        <label for="searchBar">Search by Name</label>
+                        <input type="search" id="searchBar" class="form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-5 ctest" style="padding-left: 10px; padding-right: 10px;">
+            <div class="box">
+                <form action="" style="width: 300px; margin:auto; padding-top: 10px;">
+                    <div class="form-group">
+                        <label for="regionSelector">Select Pokedex Region</label>
+                        <select name="region" id="regionSelector" class="form-control">
+                            {% for region in regions %}
+                            <option value="{{ region }}">{{region.capitalize()}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+.navStyle{
+    background-color: #2e2e2e;
+}
+
+.nav-link{
+    color: white;
+    text-align: center;
+    padding: 5px 30px;
+}
+
+.nav-item{
+    min-width: 100px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.nav-item .nav-link:hover{
+    background-color: white;
+    color: black;
+}
+
+.active a{
+    background-color: rgba(255, 0, 0, 0.69);
+    color: white;
+}
+
+.box{
+    margin-top: 10px;
+    background-color: #2e2e2e;
+    color: white;
+    height: 90px;
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: white;
+    color: black;
+}
+
