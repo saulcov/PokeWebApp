@@ -12,3 +12,6 @@ In order to begin the development of the application, I began by exploring the P
 
 ## Phase I
 In order to implement phase I, I needed to create a file MakeData.py that would scrape data from the PokeAPI and store it in an object-database. Upon running this file a pokedex class object containing all the retrived data from the API, is stored as a pickle as data/pokedex_national.pickle. 
+
+After getting the data, I created a backend.py file that would carry out all of the relevant computation in order to score a query and against all documents.
+
