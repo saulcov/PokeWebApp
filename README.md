@@ -15,4 +15,4 @@ In order to implement phase I, I needed to create a file MakeData.py that would 
 
 After getting the data, I created a backend.py file that would carry out all of the relevant computation in order to score a query and against all documents.
 
-Then came creating the front end of the website, using Flask in python.
+Then came creating the front end of the website, using Flask in python. One challenging moment was getting started using flask, and getting to understand what GET and POST methods are and how to interact with them.
